@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dsine"
+version = "2024.03.23"
+description = ''
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "bdsqlsz", email = "qinglongshengzhe@gmail.com" },
+]
+dependencies = [
+  "torch",
+  "torchvision",
+  "geffnet",
+  "glob2"
+]
+
+[project.urls]
+Documentation = "https://github.com/baegwangbin/DSINE#readme"
+Issues = "https://github.com/baegwangbin/DSINE/issues"
+Source = "https://github.com/baegwangbin/DSINE"
+
+[tool.hatch.build.targets.wheel]
+packages = [
+    "models",
+    "utils",
+]
